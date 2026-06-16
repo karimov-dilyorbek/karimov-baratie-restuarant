@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Baratie Restaurant | Healthy Food, Wealthy Mood</title>
+
+    <meta
+      name="description"
+      content="Explore delicious meals, salads, desserts and drinks from around the world at Baratie Restaurant." />
+
+    <meta name="keywords" content="restaurant, meals, desserts, salads, food ordering, baratie" />
+
+    <meta property="og:title" content="Baratie Restaurant" />
+    <meta property="og:description" content="Healthy Food, Wealthy Mood" />
+    <meta property="og:type" content="website" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-[url('./images/bg-image.png')] bg-cover bg-no-repeat text-white">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 flex justify-between items-center px-4 md:px-6 py-3 z-50 transition-all duration-300">
+      <a href="./index.html" class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl italic font-bold"> Baratie </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:block">
+        <ul class="flex gap-4 lg:gap-7 text-lg lg:text-3xl font-bold">
+          <li><a class="hover:text-orange-500" href="?category=meals">Meals</a></li>
+          <li><a class="hover:text-orange-500" href="?category=salads">Salads</a></li>
+          <li><a class="hover:text-orange-500" href="?category=desserts">Desserts</a></li>
+          <li><a class="hover:text-orange-500" href="?category=sodas">Sodas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Burger -->
+      <button id="menuBtn" class="md:hidden text-4xl font-bold" aria-label="Open Menu">☰</button>
+    </header>
+
+    <div
+      id="mobileMenu"
+      class="hidden fixed top-20 left-4 right-4 z-40 rounded-2xl bg-black/90 backdrop-blur-md border border-white/10">
+      <ul class="flex flex-col text-center text-xl font-bold py-4">
+        <li>
+          <a class="block py-3 hover:text-orange-500" href="?category=meals"> Meals </a>
+        </li>
+
+        <li>
+          <a class="block py-3 hover:text-orange-500" href="?category=salads"> Salads </a>
+        </li>
+
+        <li>
+          <a class="block py-3 hover:text-orange-500" href="?category=desserts"> Desserts </a>
+        </li>
+
+        <li>
+          <a class="block py-3 hover:text-orange-500" href="?category=sodas"> Sodas </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero -->
+    <section id="heroSection" class="min-h-screen flex flex-col items-center justify-center text-center gap-6">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
+        Welcome to,
+        <br />Baratie restuarant
+      </h1>
+      <h2 class="font-bold italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        Healthy Food,
+        <br />
+        Wealthy Mood
+      </h2>
+    </section>
+
+    <!-- Menu -->
+    <section id="menuSection" class="min-h-screen hidden pt-28 pb-16 px-4 md:px-6 max-w-7xl mx-auto">
+      <h1 id="menuTitle" class="text-5xl font-bold italic mb-2"></h1>
+
+      <div class="flex justify-between items-center flex-wrap gap-4">
+        <div class="flex gap-4 my-6 flex-wrap">
+          <input
+            aria-label="Search meals"
+            class="border rounded p-2 bg-black w-full sm:w-80 md:w-125"
+            type="text"
+            id="searchInput"
+            placeholder="Search by name..." />
+
+          <select
+            aria-label="Filter by country"
+            class="border rounded bg-black text-white w-full sm:w-40 p-2"
+            id="countryFilter">
+            <option value="all">All countries</option>
+          </select>
+        </div>
+
+        <button
+          id="openSidebar"
+          class="text-lg md:text-2xl lg:text-3xl flex items-center gap-2 cursor-pointer hover:text-orange-500 font-bold">
+          My Orders
+
+          <svg width="24" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 4C2.22386 4 2 4.22386 2 4.5C2 4.77614 2.22386 5 2.5 5H12.5C12.7761 5 13 4.77614 13 4.5C13 4.22386 12.7761 4 12.5 4H2.5ZM2 7.5C2 7.22386 2.22386 7 2.5 7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H2.5C2.22386 8 2 7.77614 2 7.5ZM2 10.5C2 10.2239 2.22386 10 2.5 10H12.5C12.7761 10 13 10.2239 13 10.5C13 10.7761 12.7761 11 12.5 11H2.5C2.22386 11 2 10.7761 2 10.5Z"
+              fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Cards -->
+      <div id="cardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="hidden text-center text-5xl mt-24 font-mono tracking-tight leading-12">
+        <p>
+          Meal Not Found
+          <br />
+          or
+          <br />
+          We Don't Have this Meal
+        </p>
+      </div>
+
+      <!-- Card Template -->
+      <template id="cardTemplate">
+        <div
+          class="card bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+          <div class="overflow-hidden h-48">
+            <img class="card-img w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+          </div>
+
+          <div class="p-4 flex flex-col gap-2">
+            <h3 class="card-name text-white font-semibold text-base"></h3>
+
+            <p class="card-desc text-white/40 text-xs leading-relaxed line-clamp-2"></p>
+
+            <div class="flex justify-between items-center mt-2">
+              <span class="card-national text-xs text-white/50 border border-white/10 rounded-full px-3 py-1">
+              </span>
+
+              <span class="card-price text-orange-400 font-semibold text-sm"> </span>
+            </div>
+
+            <span class="card-status text-xs font-medium px-2 py-1 rounded-full w-fit"> </span>
+          </div>
+
+          <div class="text-center mb-4">
+            <button class="card-order-btn border-2 border-blue-900 rounded-xl min-w-22 px-4 py-1 text-xl">
+              Order
+            </button>
+
+            <div class="card-counter hidden flex items-center justify-center gap-3 text-2xl">
+              <button class="card-minus">-</button>
+              <span class="card-qty">0</span>
+              <button class="card-plus">+</button>
+            </div>
+          </div>
+        </div>
+      </template>
+    </section>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+
+    <!-- Sidebar -->
+    <div
+      id="sidebar"
+      class="fixed top-0 right-0 h-full w-full sm:w-96 bg-black/95 z-50 translate-x-full transition-transform duration-300 flex flex-col p-6">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-bold">My Orders</h2>
+        <button id="closeSidebar" class="text-2xl hover:text-red-400">✕</button>
+      </div>
+
+      <div id="ordersList" class="flex-1 overflow-y-auto flex flex-col gap-4"></div>
+
+      <div class="border-t border-white/10 pt-4 mt-4">
+        <div class="flex justify-between text-lg font-bold">
+          <span>Total:</span>
+          <span id="totalPrice" class="text-orange-400"> 0 so'm </span>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
