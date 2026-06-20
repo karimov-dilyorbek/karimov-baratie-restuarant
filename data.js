@@ -1,7 +1,7 @@
 export const menuData = {
   meals: [
     {
-      id: 1,
+      id: "meal-1",
       name: "Margherita Pizza",
       description: "Classic Neapolitan pizza with fresh tomato sauce, mozzarella and basil",
       national: "Italy",
@@ -10,7 +10,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80",
     },
     {
-      id: 2,
+      id: "meal-2",
       name: "Beef Steak",
       description: "Juicy grilled ribeye steak seasoned with herbs and served with vegetables",
       national: "USA",
@@ -19,7 +19,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1546964124-0cce460f38ef?w=400&q=80",
     },
     {
-      id: 3,
+      id: "meal-3",
       name: "Chicken Tikka Masala",
       description: "Tender chicken in a creamy spiced tomato sauce, served with naan bread",
       national: "India",
@@ -28,7 +28,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80",
     },
     {
-      id: 4,
+      id: "meal-4",
       name: "Sushi Platter",
       description: "Assorted nigiri and maki rolls with wasabi, ginger and soy sauce",
       national: "Japan",
@@ -37,7 +37,7 @@ export const menuData = {
       image: "https://theherdsman.com.au/wp-content/uploads/2016/07/60-scaled.jpg",
     },
     {
-      id: 5,
+      id: "meal-5",
       name: "Osh (Plov)",
       description: "Traditional Uzbek rice dish cooked with lamb, carrots and onions in a kazan",
       national: "Uzbekistan",
@@ -46,7 +46,7 @@ export const menuData = {
       image: "https://www.advantour.com/img/uzbekistan/cuisine/pilaf.jpg",
     },
     {
-      id: 6,
+      id: "meal-6",
       name: "Croissant au Beurre",
       description: "Flaky butter croissant with layers of golden pastry, served warm",
       national: "France",
@@ -55,7 +55,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&q=80",
     },
     {
-      id: 7,
+      id: "meal-7",
       name: "Tacos al Pastor",
       description: "Marinated pork tacos with pineapple, cilantro and onion on corn tortillas",
       national: "Mexico",
@@ -64,7 +64,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&q=80",
     },
     {
-      id: 8,
+      id: "meal-8",
       name: "Peking Duck",
       description: "Crispy roasted duck served with thin pancakes, cucumber and hoisin sauce",
       national: "China",
@@ -76,7 +76,7 @@ export const menuData = {
 
   salads: [
     {
-      id: 1,
+      id: "salad-1",
       name: "Caesar Salad",
       description: "Romaine lettuce, parmesan, croutons with classic Caesar dressing",
       national: "USA",
@@ -85,7 +85,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1512852939750-1305098529bf?w=400&q=80",
     },
     {
-      id: 2,
+      id: "salad-2",
       name: "Greek Salad",
       description: "Fresh tomatoes, cucumbers, olives, red onion and feta cheese with olive oil",
       national: "Greece",
@@ -94,7 +94,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&q=80",
     },
     {
-      id: 3,
+      id: "salad-3",
       name: "Fattoush",
       description: "Lebanese bread salad with mixed greens, tomatoes, radish and sumac dressing",
       national: "Lebanon",
@@ -103,7 +103,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400&q=80",
     },
     {
-      id: 4,
+      id: "salad-4",
       name: "Olivier Salad",
       description: "Classic Russian salad with potatoes, carrots, peas, pickles and mayonnaise",
       national: "Russia",
@@ -112,7 +112,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400&q=80",
     },
     {
-      id: 5,
+      id: "salad-5",
       name: "Caprese Salad",
       description: "Fresh mozzarella, ripe tomatoes and basil drizzled with extra virgin olive oil",
       national: "Italy",
@@ -121,7 +121,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=400&q=80",
     },
     {
-      id: 6,
+      id: "salad-6",
       name: "Shirazi Salad",
       description: "Finely diced cucumber, tomato and red onion with lime juice and mint",
       national: "Iran",
@@ -133,7 +133,7 @@ export const menuData = {
 
   desserts: [
     {
-      id: 1,
+      id: "dessert-1",
       name: "Tiramisu",
       description: "Classic Italian dessert with mascarpone, espresso-soaked ladyfingers and cocoa",
       national: "Italy",
@@ -142,7 +142,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=80",
     },
     {
-      id: 2,
+      id: "dessert-2",
       name: "Baklava",
       description: "Layers of crispy phyllo dough filled with pistachios and sweet honey syrup",
       national: "Turkey",
@@ -151,7 +151,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1519676867240-f03562e64548?w=400&q=80",
     },
     {
-      id: 3,
+      id: "dessert-3",
       name: "Crème Brûlée",
       description: "Rich vanilla custard with a perfectly caramelized golden sugar crust",
       national: "France",
@@ -160,7 +160,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=400&q=80",
     },
     {
-      id: 4,
+      id: "dessert-4",
       name: "Mochi Ice Cream",
       description: "Japanese rice cake filled with creamy ice cream in various flavors",
       national: "Japan",
@@ -169,7 +169,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80",
     },
     {
-      id: 5,
+      id: "dessert-5",
       name: "Churros con Chocolate",
       description: "Crispy fried dough sticks dusted with cinnamon sugar and rich chocolate dip",
       national: "Spain",
@@ -178,7 +178,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&q=80",
     },
     {
-      id: 6,
+      id: "dessert-6",
       name: "Halva",
       description: "Traditional Uzbek sweet made from flour, butter, sugar and walnuts",
       national: "Uzbekistan",
@@ -190,7 +190,7 @@ export const menuData = {
 
   sodas: [
     {
-      id: 1,
+      id: "soda-1",
       name: "Limonata",
       description: "Sparkling Italian lemonade made with fresh Sicilian lemons",
       national: "Italy",
@@ -199,7 +199,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400&q=80",
     },
     {
-      id: 2,
+      id: "soda-2",
       name: "Matcha Latte",
       description: "Japanese ceremonial grade matcha whisked with steamed oat milk",
       national: "Japan",
@@ -208,7 +208,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400&q=80",
     },
     {
-      id: 3,
+      id: "soda-3",
       name: "Horchata",
       description: "Traditional Mexican rice milk drink with cinnamon and vanilla",
       national: "Mexico",
@@ -217,7 +217,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1497534446932-c925b458314e?w=400&q=80",
     },
     {
-      id: 4,
+      id: "soda-4",
       name: "Ayran",
       description: "Cold refreshing yogurt drink with a pinch of salt, popular across Central Asia",
       national: "Uzbekistan",
@@ -226,7 +226,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1570696516188-ade861b84a49?w=400&q=80",
     },
     {
-      id: 5,
+      id: "soda-5",
       name: "Mint Lemonade",
       description: "Fresh squeezed lemonade blended with crushed mint and ice",
       national: "Lebanon",
@@ -235,7 +235,7 @@ export const menuData = {
       image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80",
     },
     {
-      id: 6,
+      id: "soda-6",
       name: "Lassi",
       description: "Classic Indian yogurt-based drink blended with mango and cardamom",
       national: "India",
